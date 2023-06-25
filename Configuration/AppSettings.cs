@@ -15,7 +15,9 @@ namespace UtilityBot.Configuration
             string botToken = Environment.GetEnvironmentVariable("BotToken");
             if (string.IsNullOrEmpty(botToken))
             {
-                throw new Exception("there is must be env variable BotToken");
+                Console.WriteLine("there is must be env variable BotToken");
+                Environment.Exit(1);
+                //throw new Exception("there is must be env variable BotToken");
             }
             BotToken = botToken;
         }

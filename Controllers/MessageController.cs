@@ -19,11 +19,11 @@ namespace UtilityBot.Controllers
             TelegramClient = tgClient;
             _state = state;
         }
-        virtual protected async Task Handle(Message message, CancellationToken ct)
+        virtual public async Task Handle(Message message, CancellationToken ct)
         {
             Console.WriteLine($"{GetType().Name} controller recieved message");
         }
-        virtual protected async Task Handle(CallbackQuery? message, CancellationToken ct)
+        virtual public async Task Handle(CallbackQuery? message, CancellationToken ct)
         {
             Console.WriteLine($"{GetType().Name} controller recieved message");
         }
